@@ -146,6 +146,10 @@ function goCave() {
       text.innerText = "Don't sell your only weapon!"
     }
   }
+
+  function goFight(){
+    update(locations[3]);
+  }
   
   function fightSlime(){
     fighting = 0;
