@@ -85,7 +85,13 @@ const locations = [{
       "button text": ["REPLAY?","REPLAY?","REPLAY?"],
       "button functions": [restart,restart,restart],
       text: "You die. &#x2620;"
-    }
+    },
+    {
+     name: "win",
+     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+     "button functions": [restart, restart, restart],
+     text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"
+   }
 ];
 
 // initialize buttons
@@ -219,6 +225,10 @@ function lose() {
   update(locations[5])
 };
 
+function winGame() {
+  update(locations[6])
+}
+
 function restart(){
   xp = 0;
   health = 100;
@@ -230,3 +240,4 @@ function restart(){
   xpText.innerText = xp,
   goTown()
 }
+
