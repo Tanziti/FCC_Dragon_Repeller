@@ -51,16 +51,16 @@ const weapons = [
     }
   ]
 const locations = [{
-    name: "town square",
-    "button text": ['Go to store','Go to cave','Fight dragon'],
+    name: "Tralfagar Lobby",
+    "button text": ['Go to desk','Go to basement','stand outside'],
     'button functions': [goStore,goCave,fightDragon],
-    text: "You are in the town square. You see a sign that says \"Store\"."
+    text: "You are in the lobby of the Tralfagar"
     },
     {
-      name: "store",
-      "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+      name: "apartment",
+      "button text": ["do house chores", "Order delivery", "Go to the bar"],
       "button functions": [buyHealth, buyWeapon, goTown],
-      text: "You enter the store."
+      text: "You are home."
     },
     {
         name: 'cave',
