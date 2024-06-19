@@ -1,8 +1,8 @@
 let day = 1;
-let action = 0;
+let action = 0; //amount of actions a day 
 let xp = 0;
-let health = 100;
-let gold = 50;
+let health = 100; //mental psyche
+let gold = 200; //money
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
