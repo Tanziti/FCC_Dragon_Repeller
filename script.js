@@ -1,9 +1,10 @@
 let day = 1;
 let action = 0; //amount of actions a day 
+let charm = 0;
 let xp = 0;
 let health = 100; //mental psyche
 let gold = 200; //money
-let currentWeapon = 0;
+let currentItem = 0;
 let fighting;
 let monsterHealth;
 let inventory = ["stick"];
@@ -124,12 +125,12 @@ function goCave() {
     }
   }
   function buyWeapon() {
-    if(ccurrentWeapon < weapons.length - 1){
+    if(currentItem < weapons.length - 1){
       if (gold >= 30) {
         gold -= 30;
-        currentWeapon++;
+        currentItem++;
         goldText.innerText = gold;
-        let newWeapon = weapons[currentWeapon].name;
+        let newWeapon = weapons[currentItem].name;
         text.innerText = "You now have a " + newWeapon + ".";
         inventory.push(newWeapon);
         text.innerText += " In your inventory you have: " + inventory;
@@ -148,8 +149,8 @@ function goCave() {
     if(inventory.length > 1){
       gold += 15;
       goldText.innerText = gold;
-      let currentWeapon = inventory.shift();
-      text.innerText = "You sold a " + currentWeapon + ".";
+      let currentItem = inventory.shift();
+      text.innerText = "You sold a " + currentItem + ".";
       text.innerText +=" In your inventory you have: " + inventory + ".";
     } else {
       text.innerText = "Don't sell your only weapon!"
@@ -181,10 +182,10 @@ function goCave() {
 
 function attack(){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
-  text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
+  text.innerText += " You attack it with your " + weapons[currentItem].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+    monsterHealth -= weapons[currentItem].power + Math.floor(Math.random() * xp) + 1;
   } else {
     text.innerText += " You miss.";
   }
@@ -203,7 +204,7 @@ function attack(){
   }
   if (Math.random() <= .1 && inventory.length !== 1) {
     text.innerText += " Your " + inventory.pop() + " breaks."
-    currentWeapon--;
+    currentItem--;
   }
 }
   
@@ -241,7 +242,7 @@ function restart(){
   xp = 0;
   health = 100;
   gold = 50,
-  currentWeapon = 0,
+  currentItem = 0,
   inventory = ["stick"],
   goldText.innerText = gold,
   healthText.innerText = health,
