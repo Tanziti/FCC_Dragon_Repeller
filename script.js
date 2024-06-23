@@ -34,6 +34,10 @@ const peoples = [
   {
     name: "Al",
     type: "superintendent"
+  },
+  {
+    name: "Ben",
+    type: "elevator repairman"
   }
 ]
 const weapons = [
