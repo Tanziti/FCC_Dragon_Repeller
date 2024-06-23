@@ -18,6 +18,24 @@ const goldText = document.querySelector('#goldText');
 const monsterStats = document.querySelector('#monsterStats');
 const monsterName = document.querySelector('#monsterName');
 const monsterHealthText = document.querySelector('#monsterHealth');
+const peoples = [
+  {
+    name: "Johnson",
+    type: "resident"
+  },
+  {
+    name: "Alice",
+    type: "resident"
+  },
+  {
+    name: "Clint",
+    type: "postman"
+  },
+  {
+    name: "Al",
+    type: "superintendent"
+  }
+]
 const weapons = [
     {
       name: "stick",
