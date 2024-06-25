@@ -42,15 +42,15 @@ const peoples = [
 ]
 const weapons = [
     {
-      name: "stick",
+      name: "phone",
       power: 5
     },
     {
-      name: "dagger",
+      name: "keys",
       power: 30
     },
     {
-      name: "claw hammer",
+      name: "bat",
       power: 50
     },
     {
