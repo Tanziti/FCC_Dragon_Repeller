@@ -11,6 +11,7 @@ let inventory = ["stick"];
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
+const button4 = document.querySelector("#button4");
 const text = document.querySelector('#text');
 const xpText = document.querySelector('#xpText');
 const healthText = document.querySelector('#healthText');
@@ -98,6 +99,12 @@ const locations = [{
         text: 'You enter the cave. You see some monsters.'
     },
     {
+      name: 'stats',
+      "button text": [],
+      "button functions": [],
+      text: 'These are your stats... SLAYYYY'
+    },
+    {
       name: "lose",
       "button text": ["REPLAY?","REPLAY?","REPLAY?"],
       "button functions": [restart,restart,restart],
@@ -115,6 +122,7 @@ const locations = [{
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
+button4.onclick = viewStats;
 
 function update(location) {
     monsterStats.style.display = "none"
@@ -126,7 +134,9 @@ function update(location) {
     button3.onclick = location["button functions"][2];
     text.innerText = location.text;
   }
-  
+  function viewStats(){
+
+  }
   function goTown() {
     update(locations[0]);
   }
