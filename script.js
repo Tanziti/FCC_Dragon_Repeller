@@ -82,20 +82,20 @@ const weapons = [
   ]
 const locations = [{
     name: "Tralfagar Lobby",
-    "button text": ['Go to desk','Go to basement','stand outside'],
-    'button functions': [goStore,goCave,fightDragon],
+    "button text": ['Go to desk','Go to basement','stand outside', 'Stats'],
+    'button functions': [goStore,goCave,fightDragon, viewStats],
     text: "You are in the lobby of the Tralfagar"
     },
     {
       name: "apartment",
-      "button text": ["do house chores", "Order delivery", "Go to the bar"],
-      "button functions": [buyHealth, buyWeapon, goTown],
+      "button text": ["do house chores", "Order delivery", "Go to the bar", 'Stats'],
+      "button functions": [buyHealth, buyWeapon, goTown, viewStats],
       text: "You are home."
     },
     {
         name: 'cave',
-        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
-        "button functions": [fightSlime, fightBeast, goTown],
+        "button text": ["Fight slime", "Fight fanged beast", "Go to town square", 'stats'],
+        "button functions": [fightSlime, fightBeast, goTown, viewStats],
         text: 'You enter the cave. You see some monsters.'
     },
     {
