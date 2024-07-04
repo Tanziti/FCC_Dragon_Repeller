@@ -1,5 +1,5 @@
 let day = 1;
-let action = 0; //amount of actions a day 
+let action = 9; //amount of actions a day 
 let charm = 0;
 let xp = 0;
 let health = 100; //mental psyche
@@ -63,7 +63,7 @@ const weapons = [
       power: 100
     }
   ];
-  const monsters =[
+  const enemys =[
     {
       name: "slime",
       level: 2,
@@ -83,7 +83,7 @@ const weapons = [
 const locations = [{
     name: "Tralfagar Lobby",
     "button text": ['Go to desk','Go to basement','stand outside', 'Stats'],
-    'button functions': [goStore,goCave,fightDragon, viewStats],
+    'button functions': [goCave,goStore,fightDragon, viewStats],
     text: "You are in the lobby of the Tralfagar"
     },
     {
@@ -93,10 +93,10 @@ const locations = [{
       text: "You are home."
     },
     {
-        name: 'cave',
-        "button text": ["Fight slime", "Fight fanged beast", "Go to town square", 'stats'],
+        name: 'basement',
+        "button text": ["Clean/Mop floors", "Speak to Porter", "Knock on Al's door", 'stats'],
         "button functions": [fightSlime, fightBeast, goTown, viewStats],
-        text: 'You enter the cave. You see some monsters.'
+        text: 'You enter the basement. it has a funky smell'
     },
     {
       name: 'stats',
@@ -119,8 +119,8 @@ const locations = [{
 ];
 
 // initialize buttons
-button1.onclick = goStore;
-button2.onclick = goCave;
+button1.onclick = goCave;
+button2.onclick = goStore;
 button3.onclick = fightDragon;
 button4.onclick = viewStats;
 
@@ -135,7 +135,7 @@ function update(location) {
     text.innerText = location.text;
   }
   function viewStats(){
-
+    update(locations[3])
   }
   function goTown() {
     update(locations[0]);
