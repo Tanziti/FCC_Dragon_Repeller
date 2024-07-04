@@ -83,7 +83,7 @@ const weapons = [
 const locations = [{
     name: "Tralfagar Lobby",
     "button text": ['Go to desk','Go to basement','stand outside', 'Stats'],
-    'button functions': [goCave,goStore,fightDragon, viewStats],
+    'button functions': [goStore,goBasement,fightDragon, viewStats],
     text: "You are in the lobby of the Tralfagar"
     },
     {
@@ -119,7 +119,7 @@ const locations = [{
 ];
 
 // initialize buttons
-button1.onclick = goCave;
+button1.onclick = goBasement;
 button2.onclick = goStore;
 button3.onclick = fightDragon;
 button4.onclick = viewStats;
@@ -145,7 +145,7 @@ function update(location) {
     update(locations[1]);
   }  
   
-function goCave() {
+function goBasement() {
     update(locations[2]);
   }
   
