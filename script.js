@@ -100,8 +100,8 @@ const locations = [{
     },
     {
       name: 'stats',
-      "button text": [],
-      "button functions": [],
+      "button text": ["Go Back"],
+      "button functions": [goBack],
       text: 'These are your stats... SLAYYYY'
     },
     {
@@ -136,6 +136,9 @@ function update(location) {
   }
   function viewStats(){
     update(locations[3])
+  }
+  function goBack(){
+    //goes back to previous location
   }
   function goTown() {
     update(locations[0]);
