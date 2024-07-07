@@ -21,6 +21,10 @@ const monsterName = document.querySelector('#monsterName');
 const monsterHealthText = document.querySelector('#monsterHealth');
 const peoples = [
   {
+    name: "Magic Salesman",
+    type: "salesman"
+  },
+  {
     name: "Johnson",
     type: "resident"
   },
