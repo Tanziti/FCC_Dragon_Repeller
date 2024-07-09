@@ -1,6 +1,7 @@
 // game.js
 
 import { locations, peoples, weapons, enemys } from './data.js';
+import { update, hideButton, showButton } from './utils.js';
 
 export let day = 1;
 export let action = 9;
@@ -32,16 +33,6 @@ button2.onclick = goStore;
 button3.onclick = fightDragon;
 button4.onclick = viewStats;
 
-function update(location) {
-  monsterStats.style.display = "none";
-  button1.innerText = location['button text'][0];
-  button2.innerText = location["button text"][1];
-  button3.innerText = location["button text"][2];
-  button1.onclick = window[location["button functions"][0]];
-  button2.onclick = window[location["button functions"][1]];
-  button3.onclick = window[location["button functions"][2]];
-  text.innerText = location.text;
-}
 
 function viewStats() {
   update(locations[3]);
