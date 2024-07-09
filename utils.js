@@ -19,3 +19,11 @@ export function getMonsterAttackValue(level) {
 export function isMonsterHit() {
   return Math.random() > .2 || health < 20;
 }
+
+export function hideButton(button) {
+  button.style.display = 'none';
+}
+
+export function showButton(button) {
+  button.style.display = 'block';
+}
